@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi tiền tệ</title>
+</head>
+
+<body>
+<form class="fist" action="name">
+    <table>
+        <tr>
+            <th id="Amount">Amount</th>
+            <th id="From Currency" style="padding-left: 50px">From Currency</th>
+            <th id="To Currency" style="padding-left: 50px">To Currency</th>
+        </tr>
+        <tr>
+            <td id="number">
+                <input type="number"value="1" id="TyGia">
+            </td>
+            <td id="namae" style="padding-left: 60px">
+                <select id="Bien">
+                    <option value="23000">Việt Nam</option>
+                    <option value="1">America</option>
+                </select>
+            </td>
+            <td id="US" style="padding-left: 60px">
+                <select id="bien2">
+                    <option value="1">USD</option>
+                    <option value="23000">VND</option>
+                </select>
+            </td>
+            <td id="click" style="padding-left: 60px">
+                <input style="background-color: #a364c9" type="button" value="Convert" onclick="do_somtime()">
+            </td>
+        </tr>
+    </table>
+    <div id="Kq">
+
+    </div>
+</form>
+<script>
+    function do_somtime()
+    {
+        let $in = document.getElementById('TyGia').value;
+        let $a =  document.getElementById('Bien').value;
+        let $b =  document.getElementById('bien2').value;
+        let kq = ($in*$b)/$a;
+        alert(kq);
+    }
+
+</script>
+
+</body>
+</html>
