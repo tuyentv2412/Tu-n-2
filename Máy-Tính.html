@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<form>
+    <tr>
+    <td>
+        <input id="number1" type=" ">
+    </td>
+         <td><input id="number2" type="">
+        </td>
+    </tr>
+    </br>
+    <td>
+        <button onclick="sum('+')" id="Addition">Addition(+)</button>
+    </td>
+    <td>
+        <button onclick="sum('-')" id="Subtraction">Subtraction(-)</button>
+    </td>
+    <td>
+        <button onclick="sum('*')" id="Multiplication">Multiplication(*)</button>
+    </td>
+    <td>
+        <button onclick="sum('/')" id="Division">Division(/)</button>
+    </td></br>
+
+</form>
+<script>
+    function sum(bieuthuc){
+        let $in = document.getElementById('number1').value;
+        let $out = document.getElementById('number2').value;
+        let a = parseInt($in);
+        let b = parseInt($out);
+        if (bieuthuc=='+'){
+            let sum = a + b;
+            alert(sum);
+        }
+        if (bieuthuc=='-'){
+            let sum = a - b;
+            alert(sum);
+        }
+        if (bieuthuc=='*'){
+            let sum = a * b;
+            alert(sum);
+        }
+        if (bieuthuc=='/'){
+            let sum = a / b;
+            alert(sum);
+        }
+
+    }
+
+</script>
+</body>
+</html>

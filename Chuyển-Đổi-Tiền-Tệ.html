@@ -34,9 +34,8 @@
             </td>
         </tr>
     </table>
-    <div id="Kq">
-
-    </div>
+    <span>Kết quả là: </span>
+    <span id="kq"></span>
 </form>
 <script>
     function do_somtime()
@@ -45,7 +44,7 @@
         let $a =  document.getElementById('Bien').value;
         let $b =  document.getElementById('bien2').value;
         let kq = ($in*$b)/$a;
-        alert(kq);
+        document.getElementById('kq').innerHTML = kq;
     }
 
 </script>
