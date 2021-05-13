@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Ứng dụng máy tính</title>
@@ -15,17 +16,19 @@
     </tr>
     </br>
     <td>
-        <button onclick="sum('+')" id="Addition">Addition(+)</button>
+        <input type="button" value="Addition(+)" onclick="sum('+')" id="Addition">
     </td>
     <td>
-        <button onclick="sum('-')" id="Subtraction">Subtraction(-)</button>
+        <input type="button" value="Subtraction(-)" onclick="sum('-')" id="Subtraction">
     </td>
     <td>
-        <button onclick="sum('*')" id="Multiplication">Multiplication(*)</button>
+        <input value="Multiplication(*)" type="button" onclick="sum('*')" id="Multiplication">
     </td>
     <td>
-        <button onclick="sum('/')" id="Division">Division(/)</button>
+        <input value=" Division(/)" type="button" onclick="sum('/')" id="Division">
     </td></br>
+    <span>Result Devision:</span>
+    <span id="kq"></span>
 
 </form>
 <script>
@@ -36,19 +39,19 @@
         let b = parseInt($out);
         if (bieuthuc=='+'){
             let sum = a + b;
-            alert(sum);
+            document.getElementById('kq').innerHTML = sum;
         }
         if (bieuthuc=='-'){
             let sum = a - b;
-            alert(sum);
+            document.getElementById('kq').innerHTML = sum;
         }
         if (bieuthuc=='*'){
             let sum = a * b;
-            alert(sum);
+            document.getElementById('kq').innerHTML = sum;
         }
         if (bieuthuc=='/'){
             let sum = a / b;
-            alert(sum);
+            document.getElementById('kq').innerHTML = sum;
         }
 
     }
