@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính đơn giản</title>
+  <style>
+    button{
+      width: 50px;
+      height: 50px;
+    }
+    td {
+      height: 50px;
+      width: 50px;
+      /*background-color: black;*/
+      /*color: white;*/
+    }
+    #screen {
+      font-size: 35px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <table border="">
+<tr>
+  <td colspan="4" id="screen" style="padding-right:0px">0</td>
+</tr>
+    <tr>
+      <td>
+        <button onclick="clickbtn(this.innerHTML)">1</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">2</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">3</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">+</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="clickbtn(this.innerHTML)">4</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">5</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">6</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">-</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="clickbtn(this.innerHTML)">7</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">8</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">9</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">*</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="del()">C</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">0</button></td>
+      <td><button onclick="cal()">=</button></td>
+      <td><button onclick="clickbtn(this.innerHTML)">/</button></td>
+    </tr>
+  </table>
+  <script>
+    let screen = document.getElementById('screen');
+     function clickbtn (number){
+    if (screen.innerHTML ==0) {
+      screen.innerHTML = number;
+    }
+    else {
+      screen.innerHTML += number;
+    }
+     }
+     function cal () {
+       let exp = screen.innerHTML;
+       let result = eval(exp);
+       screen.innerHTML = result;
+     }
+     function del () {
+       screen.innerHTML = '0'
+     }
+  </script>
+</body>
+</html>
