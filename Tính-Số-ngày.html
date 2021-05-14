@@ -6,9 +6,9 @@
 </head>
 <body>
 <span><input type="text" id="number2"><input type="button" value="Tính Số Ngày"onclick="number1()"></span></br>
-và
+<span id="kq"></span>
 </br>
-<span><input type="text"id="number3"><input type="button" value="Tính Số Ngày" onclick="number()"></span></br>
+
 <script>
     function number1 () {
         let a = document.getElementById('number2').value;
@@ -20,22 +20,19 @@ và
             case '8':
             case '10':
             case '12':
-                alert('Tháng này có 31 ngày');
+                document.getElementById('kq').innerHTML = ('tháng '  +  a  +  ' có 31 ngày');
                 break;
             case '4':
             case '6':
             case '9':
             case '11':
-                alert('Tháng này có 30 ngày');
+                document.getElementById('kq').innerHTML = ('tháng '  +  a  +  ' có 30 ngày');
                 break;
-        }
-    }
-    function number () {
-        let b = document.getElementById('number3').value;
-        switch (b){
             case '2':
-            alert('Tháng này có 29 ngày');
-            break;
+                document.getElementById('kq').innerHTML = ('tháng '  +  a  +  ' có 28 hoặc 29 ngày');
+                break;
+            default :
+                document.getElementById('kq').innerHTML = ("I don't know you speaking");
         }
     }
 
