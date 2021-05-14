@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="position: absolute;left: 220px;top: 175px">Do You Love Me?</h1>
+<input type="button"value="Yes" onclick="Click1()" style="position: absolute;left: 285px;top: 235px">
+<input id="move1" type="button"value="No" onmouseover="Off1()" style="position: absolute;left: 164px;top: 64px">
+<script>
+  function Click1(){
+    alert('<3');
+  }
+  function Off1(){
+  let a = Math.floor(Math.random() * window.innerWidth);
+  let b = Math.floor(Math.random() * window.innerHeight);
+  document.getElementById('move1').style.left = a + 'px';
+  document.getElementById('move1').style.top = b + 'px';
+
+  }
+
+</script>
+
+</body>
+</html>
