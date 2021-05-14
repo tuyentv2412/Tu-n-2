@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bảng tính khối lượng cơ thể</title>
+</head>
+<body>
+<script>
+  let weidth = +prompt();
+  let height = +prompt();
+  let bmi = weidth / ( height ^ 2);
+  if (bmi < 18)
+    document.write('UnderWidth');
+  else if (bmi < 25)
+    document.write(Normal);
+  else if (bmi < 30)
+    document.write(overWeidth);
+  else
+    document.write(obese);
+</script>
+
+</body>
+</html>
