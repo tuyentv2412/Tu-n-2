@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+</head>
+<body>
+<form action="">
+  <img id="MyImg" src="https://sasukegym.vn/wp-content/uploads/2019/06/qua-bong-da-thi-dau-chat-luong.jpg" style="width: 300px"></br>
+  <p>Click button below to move the image to right</p>
+  <input value="Click me" type="button" onclick="moveRight();"></br>
+</form>
+<script>
+  let img0j = null;
+  img0j = document.getElementById('MyImg');
+  function init () {
+    img0j = document.getElementById('MyImg');
+    img0j.style.position = 'relative';
+    img0j.style.left = '0px';
+  }
+  function moveRight () {
+    img0j.style.left = parseInt(img0j.style.left) + 10 + "px";
+  }
+  window.onload = init;
+
+</script>
+
+</body>
+</html>
