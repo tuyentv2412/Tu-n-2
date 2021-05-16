@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi anh</title>
+</head>
+<body>
+<img src="./picture/Dog.jpg" id="image1" onclick="changeImg()">
+<h1 id="show" style="color: black"></h1>
+<script>
+    function changeImg () {
+        let a = document.getElementById('image1').src;
+        let filename = a.replace(/^.*[\\\/]/, '');
+        if (filename == 'Dog.jpg'){
+            document.getElementById('image1').src = "./picture/Cat.jpg";
+        } else {
+            document.getElementById('image1').src = "./picture/Dog.jpg";
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
